@@ -41,12 +41,14 @@ export default {
 .scroll
 
     &-container
-        padding: 1rem
+        padding: 1rem 1rem 3rem 1rem
         display: flex
         flex-direction: column
         align-items: center
         gap: 1rem
         transition: 3s
+        @media (min-width: 480px)
+            padding: 1rem
 
     &-mouse
         width: 40px

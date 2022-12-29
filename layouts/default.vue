@@ -1,6 +1,7 @@
 <template>
     <main>
         <Nuxt />
+        <basic-footer/>
     </main>
 </template>
 

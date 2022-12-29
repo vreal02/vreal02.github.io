@@ -57,7 +57,7 @@
     export default {
         layout: 'default',
         head: {
-            title: 'Vicente Real OnRoom'
+            title: 'Vicente Real Casino'
         }
     }
     

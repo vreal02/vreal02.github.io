@@ -68,6 +68,7 @@ hgroup
 
 .isBold
     font-family: 'Poppins Bold'
+    font-weight: 600
 
 .isThin
     font-family: 'Poppins'
