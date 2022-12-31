@@ -7,7 +7,7 @@ export default {
   head: {
     title: 'Vicente Real Portfolio',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'es'
     },
     meta: [
       { charset: 'utf-8' },
@@ -40,7 +40,32 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n', 
   ],
+
+  i18n: {
+    locales: [
+      {
+        name: 'ES',
+        code: 'es',
+        iso: 'es-ES',
+        file: 'es.js'
+      },
+      {
+        name: 'EN',
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.js'
+      },
+    ],
+    langDir: '~/locales/',
+    defaultLocale: 'es',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

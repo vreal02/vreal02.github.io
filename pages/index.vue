@@ -20,8 +20,8 @@
                 <basic-title
 
                     :title="{
-                        title: `Hi, I'm Vicente. Nice to meet you.`,
-                        paragraph: `I'm a young programmer in training, organized and outgoing, I work both individually and in teams, I'm always willing to update myself and learn about new technologies. `
+                        title: $t('hello.title'),
+                        paragraph: $t('hello.description')
                     }"
 
                     :isBold="true"
@@ -39,7 +39,7 @@
 
                         :title="{
                             title: 'Front-end',
-                            subtitle: 'I like to transform my own ideas, and see the result in the design.'
+                            subtitle: $t('technologies.front')
                         }"
                         
                         :isBold="true"
@@ -48,7 +48,7 @@
                     />
 
                     <basic-list
-                        :title="'Languajes I speak'"
+                        :title="$t('technologies.lang')"
                         :list="[
                             'HTML 5',
                             'CSS 3',
@@ -65,7 +65,7 @@
                         
                         :title="{
                             title: 'Back-end',
-                            subtitle: 'The unseen part of a website is also beautiful.'
+                            subtitle: $t('technologies.back')
                         }"
                         
                         :isBold="true"
@@ -75,7 +75,7 @@
                     />
 
                     <basic-list
-                        :title="'Languajes I speak'"
+                        :title="$t('technologies.lang')"
                         :list="[
                             'Python',
                             'Django',
@@ -95,8 +95,8 @@
             <basic-title
 
                 :title="{
-                    title: 'My projects',
-                    subtitle: 'Here you can see all my projects'
+                    title: $t('projects.title'),
+                    subtitle: $t('projects.description')
                 }"
                 :isBold="true"
                 :titleCenter="true"
@@ -105,11 +105,11 @@
 
             <basic-card
                 :text="{
-                    title: 'OnRoom',
-                    paragraph: 'OnRoom is an educational software that, once implemented in a school, facilitates communication between students and teachers in a simple and intuitive way.'
+                    title: $t('projects.onroom.title'),
+                    paragraph: $t('projects.onroom.description')
                 }"
                 :button="{
-                    text: 'See more',
+                    text: $t('button.seeMore'),
                     link: '/onroom'
                 }"
 
@@ -128,11 +128,11 @@
 
             <basic-card
                 :text="{
-                    title: 'Casino Pythoniani',
-                    paragraph: 'The pythoniani casino was my first group work as a programmer, in which I participated in three of the six games it has: poker, bingo and horse race, the difficulty of this project is that it is all console and very visual being python a backend language.'
+                    title: $t('projects.casino.title'),
+                    paragraph: $t('projects.casino.description')
                 }"
                 :button="{
-                    text: 'See more',
+                    text: $t('button.seeMore'),
                     link: '/casino'
                 }"
 
@@ -159,7 +159,12 @@
 <script>
 
     export default{
-        layout: 'default'
+        layout: 'default',
+        computed: {
+            availableLocales(){
+                console.log(this.$i18n.locales)
+            }
+        }
     }
 
 </script>

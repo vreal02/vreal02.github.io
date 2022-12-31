@@ -1,7 +1,6 @@
 <template>
-    <a class="button" :href="link">
-        {{text}}
-    </a>
+
+    <nuxt-link class="button" :to="localePath(link)">{{ text }}</nuxt-link>
     
 </template>
 
